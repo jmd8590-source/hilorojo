@@ -1,0 +1,7 @@
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://js.hcaptcha.com https://code.tidio.co; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://code.tidio.co data:; img-src 'self' data: https://code.tidio.co https://unpkg.com https://cdnjs.cloudflare.com https://avatars.tidiochat.com https://tidio-images-messenger.s3.us-east-1.amazonaws.com; media-src 'self' https://code.tidio.co; connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://sentry-new.tidio.co https://socket.tidio.co wss://socket.tidio.co https://uploads.tidio.com; frame-src https://newassets.hcaptcha.com https://hcaptcha.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests

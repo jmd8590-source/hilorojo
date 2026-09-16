@@ -1,0 +1,9 @@
+{
+  "name": "rojo-hilo-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web corporativa de Rojo Hilo — atelier de bordado y encaje de bolillos.",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rojo Hilo — Atelier de Bordado y Encaje de Bolillos</title>
+<meta name="description" content="Rojo Hilo: piezas de autor en bordado y encaje de bolillos, talleres y restauración textil. Piezas a medida, únicas y numeradas.">
+<meta name="theme-color" content="#0b0908">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tu-dominio.com/">
+
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rojo Hilo — Atelier de Bordado y Encaje de Bolillos">
+<meta property="og:description" content="Piezas de autor en bordado y encaje de bolillos, talleres y restauración textil.">
+<meta property="og:url" content="https://tu-dominio.com/">
+<meta property="og:locale" content="es_ES">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0908'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23c81d2b'%3E%E2%9C%B1%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Literata:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+
+<script>
+/* Aplica las preferencias de accesibilidad guardadas ANTES de pintar la
+   página, para no dar un "flash" del estado equivocado. Versión mínima de
+   la lógica completa que vive en /assets/a11y.js. */
+(function(){
+  try{
+    var p = JSON.parse(localStorage.getItem("rojohilo_a11y_prefs")) || {};
+    var c = document.documentElement.classList;
+    if (p.textScale === 1) c.add("a11y-text-lg");
+    if (p.textScale === 2) c.add("a11y-text-xl");
+    if (p.contrast) c.add("a11y-contrast");
+    if (p.noMotion) c.add("a11y-no-motion");
+    if (p.underline) c.add("a11y-underline");
+    if (p.dyslexic) c.add("a11y-dyslexic");
+  }catch(e){}
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Rojo Hilo",
+  "description": "Atelier de bordado y encaje de bolillos: piezas a medida, talleres y restauración textil.",
+  "url": "https://tu-dominio.com/",
+  "email": "hola@rojohilo.studio",
+  "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="Rojo Hilo — inicio"><span class="brand-mark">✱</span>ROJO HILO</a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a href="#tecnicas">Técnicas</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto" class="nav-cta">Encargar</a>
+  </nav>
+  <button class="a11y-btn" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel" aria-label="Opciones de accesibilidad">
+    <span aria-hidden="true">♿</span><span class="a11y-btn-label">Accesibilidad</span>
+  </button>
+  <button class="burger" id="burgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="a11y-panel" id="a11yPanel" role="region" aria-label="Panel de accesibilidad" hidden>
+  <h2>Accesibilidad</h2>
+  <div class="a11y-row">
+    <span id="a11yTextRowLabel">Tamaño de texto</span>
+    <div class="a11y-stepper">
+      <button type="button" id="a11yTextMinus" aria-label="Reducir tamaño de texto">A−</button>
+      <span id="a11yTextLabel" aria-live="polite">Normal</span>
+      <button type="button" id="a11yTextPlus" aria-label="Aumentar tamaño de texto">A+</button>
+    </div>
+  </div>
+  <div class="a11y-row">
+    <span id="a11yContrastLabel">Alto contraste</span>
+    <button type="button" class="a11y-switch" id="a11yContrastSwitch" aria-pressed="false" aria-labelledby="a11yContrastLabel"></button>
+  </div>
+  <div class="a11y-row">
+    <span id="a11yMotionLabel">Reducir movimiento</span>
+    <button type="button" class="a11y-switch" id="a11yMotionSwitch" aria-pressed="false" aria-labelledby="a11yMotionLabel"></button>
+  </div>
+  <div class="a11y-row">
+    <span id="a11yUnderlineLabel">Subrayar enlaces</span>
+    <button type="button" class="a11y-switch" id="a11yUnderlineSwitch" aria-pressed="false" aria-labelledby="a11yUnderlineLabel"></button>
+  </div>
+  <div class="a11y-row">
+    <span id="a11yDyslexicLabel">Fuente para dislexia</span>
+    <button type="button" class="a11y-switch" id="a11yDyslexicSwitch" aria-pressed="false" aria-labelledby="a11yDyslexicLabel"></button>
+  </div>
+  <button type="button" class="a11y-reset" id="a11yResetBtn">Restablecer todo</button>
+  <p class="a11y-panel-foot">Declaración de accesibilidad: <a href="/accesibilidad.html">ver detalles</a></p>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <a href="#tecnicas" data-close>Técnicas</a>
+  <a href="#proceso" data-close>Proceso</a>
+  <a href="#portafolio" data-close>Portafolio</a>
+  <a href="#servicios" data-close>Servicios</a>
+  <a href="#testimonios" data-close>Testimonios</a>
+  <a href="#contacto" data-close>Contacto</a>
+  <div class="mm-foot">hola@rojohilo.studio · Madrid, con cita previa</div>
+</div>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <svg class="hero-stitch" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,420 Q150,340 300,420 T600,420 T900,420 T1200,420" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="6 10" opacity=".45"/>
+      <path d="M0,460 Q150,380 300,460 T600,460 T900,460 T1200,460" fill="none" stroke="#c81d2b" stroke-width="1.5" stroke-dasharray="3 9" opacity=".35"/>
+    </svg>
+    <div class="container">
+      <p class="eyebrow" data-reveal>Atelier — bordado &amp; encaje de bolillos</p>
+      <h1 class="hero-title" data-reveal>
+        R<span class="o-bolillo">O</span>J<span class="accent">O</span><br>
+        HIL<span class="o-bolillo">O</span>
+      </h1>
+      <p class="hero-sub" data-reveal>No hacemos piezas «delicadas». Hacemos armaduras de hilo: bordado y encaje de bolillos llevados al límite, puntada a puntada, sin pedir permiso.</p>
+      <div class="hero-row" data-reveal>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="#portafolio">Ver el portafolio</a>
+          <a class="btn btn-line" href="#contacto">Encargar una pieza</a>
+        </div>
+        <div class="hero-meta">
+          <span>Est. artesanal — Madrid</span>
+          <span>Piezas únicas · numeradas · certificadas</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="line"></span>desplaza</div>
+  </section>
+
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span><i>✱</i>BORDADO<i>✱</i>ENCAJE DE BOLILLOS<i>✱</i>ALTA COSTURA TEXTIL<i>✱</i>MUNDILLO<i>✱</i>HILO DE ORO<i>✱</i>RESTAURACIÓN<i>✱</i>PUNTO A PUNTO</span>
+      <span><i>✱</i>BORDADO<i>✱</i>ENCAJE DE BOLILLOS<i>✱</i>ALTA COSTURA TEXTIL<i>✱</i>MUNDILLO<i>✱</i>HILO DE ORO<i>✱</i>RESTAURACIÓN<i>✱</i>PUNTO A PUNTO</span>
+    </div>
+  </div>
+
+  <section class="manifiesto" id="manifiesto">
+    <div class="container manifiesto-grid">
+      <div data-reveal>
+        <p class="eyebrow">Manifiesto / 01</p>
+        <p class="manifiesto-quote">La tradición no se hereda: <span class="accent">se desobedece</span> con la aguja en la mano.</p>
+      </div>
+      <div class="manifiesto-body" data-reveal>
+        <p>Cada pieza sale de un <strong>mundillo</strong> — el cojín de encaje de bolillos que llevamos tres generaciones calentando — o de un <strong>bastidor</strong> tensado hasta que el hilo canta. Ahí empieza todo: picado sobre pergamino, alfileres clavados uno a uno, cientos de bolillos cruzándose como si discutieran.</p>
+        <p>No creemos que lo artesanal tenga que pedir disculpas por existir. El bordado con hilo de oro y el encaje que tardó tu abuela un invierno entero en tejer pueden convivir con cuero, tachuelas y una actitud que no encaja en ninguna vitrina de museo.</p>
+        <p>Trabajamos despacio porque el hilo no negocia. Y trabajamos fuerte porque una pieza que tarda ocho semanas en nacer tiene derecho a hacer ruido.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tecnicas" id="tecnicas">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Oficio / 02</p>
+        <h2 class="section-title">Dos técnicas, un mismo hilo</h2>
+      </div>
+      <div class="tec-grid">
+        <div class="tec-card" data-reveal>
+          <svg class="tec-art" viewBox="0 0 400 225" role="img" aria-label="Patrón de bordado con puntadas en zigzag">
+            <rect width="400" height="225" fill="#161009"/>
+            <g stroke="#c81d2b" stroke-width="3" fill="none" opacity=".85">
+              <path d="M10,150 L40,90 L70,150 L100,90 L130,150 L160,90 L190,150 L220,90 L250,150 L280,90 L310,150 L340,90 L370,150"/>
+            </g>
+            <g stroke="#c9a227" stroke-width="2" fill="none" opacity=".7">
+              <path d="M10,180 L40,120 L70,180 L100,120 L130,180 L160,120 L190,180 L220,120 L250,180 L280,120 L310,180 L340,120 L370,180"/>
+            </g>
+            <circle cx="60" cy="55" r="16" fill="none" stroke="#f2e9da" stroke-width="2" opacity=".5"/>
+            <circle cx="330" cy="55" r="10" fill="none" stroke="#f2e9da" stroke-width="2" opacity=".5"/>
+          </svg>
+          <span class="tec-num">01</span>
+          <h3>Bordado</h3>
+          <p>Aguja, bastidor y horas de punto lanzado, realce y sombra chino. Trabajamos hilo de seda, algodón mate, metálico y canutillo sobre lino, lana hervida o cuero.</p>
+          <div class="tag-row">
+            <span class="tag">Hilo de oro</span>
+            <span class="tag">Realce</span>
+            <span class="tag">Punto de sombra</span>
+            <span class="tag">Canutillo</span>
+          </div>
+        </div>
+        <div class="tec-card" data-reveal>
+          <svg class="tec-art" viewBox="0 0 400 225" role="img" aria-label="Patrón de encaje de bolillos con retícula de puntadas">
+            <rect width="400" height="225" fill="#161009"/>
+            <g stroke="#f2e9da" stroke-width="1" opacity=".5">
+              <path d="M0,0 L400,225 M400,0 L0,225 M0,56 L400,169 M0,169 L400,56 M100,0 L100,225 M200,0 L200,225 M300,0 L300,225"/>
+            </g>
+            <g fill="#c9a227">
+              <circle cx="100" cy="56" r="4"/><circle cx="200" cy="56" r="4"/><circle cx="300" cy="56" r="4"/>
+              <circle cx="100" cy="112" r="4"/><circle cx="200" cy="112" r="4"/><circle cx="300" cy="112" r="4"/>
+              <circle cx="100" cy="169" r="4"/><circle cx="200" cy="169" r="4"/><circle cx="300" cy="169" r="4"/>
+            </g>
+          </svg>
+          <span class="tec-num">02</span>
+          <h3>Encaje de bolillos</h3>
+          <p>Sobre el mundillo, picado propio y decenas de bolillos de boj trenzando torchón, punto de Aranda o blonda. Cada patrón se dibuja antes de clavar el primer alfiler.</p>
+          <div class="tag-row">
+            <span class="tag">Mundillo</span>
+            <span class="tag">Torchón</span>
+            <span class="tag">Punto de Aranda</span>
+            <span class="tag">Blonda</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proceso" id="proceso">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Método / 03</p>
+        <h2 class="section-title">De la idea a la pieza numerada</h2>
+      </div>
+      <div class="proceso-list">
+        <div class="proceso-item" data-reveal>
+          <span class="proceso-ghost" aria-hidden="true">01</span>
+          <span class="proceso-num">01</span>
+          <h3>Boceto y picado</h3>
+          <p>Escuchamos el encargo, dibujamos el patrón a mano y lo picamos sobre pergamino o lo trasladamos al bastidor. Aquí se decide el carácter de la pieza.</p>
+        </div>
+        <div class="proceso-item" data-reveal>
+          <span class="proceso-ghost" aria-hidden="true">02</span>
+          <span class="proceso-num">02</span>
+          <h3>Selección de hilos</h3>
+          <p>Seda, hilo metálico, lino, boj para los bolillos. Cada material se prueba contra la luz antes de comprometerse con él durante semanas.</p>
+        </div>
+        <div class="proceso-item" data-reveal>
+          <span class="proceso-ghost" aria-hidden="true">03</span>
+          <span class="proceso-num">03</span>
+          <h3>Montaje</h3>
+          <p>Tela tensada en bastidor o picado clavado en el mundillo con alfileres. Sin esta tensión exacta, ninguna puntada aguanta el tiempo.</p>
+        </div>
+        <div class="proceso-item" data-reveal>
+          <span class="proceso-ghost" aria-hidden="true">04</span>
+          <span class="proceso-num">04</span>
+          <h3>Puntada a puntada</h3>
+          <p>El grueso del trabajo: entre dos y ocho semanas de bordado o cruce de bolillos, según tamaño y densidad del diseño.</p>
+        </div>
+        <div class="proceso-item" data-reveal>
+          <span class="proceso-ghost" aria-hidden="true">05</span>
+          <span class="proceso-num">05</span>
+          <h3>Acabado y certificado</h3>
+          <p>Remate, plancha al vapor y una ficha numerada con técnica, materiales y fecha. Cada pieza sale del taller con su propia identidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portafolio" id="portafolio">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Piezas / 04</p>
+        <h2 class="section-title">Portafolio (selección)</h2>
+      </div>
+      <p class="port-note" data-reveal>Ilustraciones de ejemplo — sustituir por fotografía real de cada pieza antes de publicar la web definitiva.</p>
+      <div class="port-grid">
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bordado</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Armadura de Hilo">
+            <rect width="320" height="400" fill="#0b0908"/>
+            <g stroke="#c9a227" stroke-width="2" fill="none" opacity=".8">
+              <path d="M20,340 L60,260 L100,340 L140,260 L180,340 L220,260 L260,340 L300,260"/>
+              <path d="M20,300 L60,220 L100,300 L140,220 L180,300 L220,220 L260,300 L300,220"/>
+            </g>
+            <circle cx="160" cy="130" r="70" fill="none" stroke="#c81d2b" stroke-width="2" opacity=".7"/>
+            <circle cx="160" cy="130" r="40" fill="none" stroke="#f2e9da" stroke-width="1.5" opacity=".5"/>
+          </svg>
+          <div class="port-info"><h3>Armadura de Hilo</h3><p>Bordado en relieve · hilo metálico · 2025</p></div>
+        </article>
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bolillos</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Mundillo Salvaje">
+            <rect width="320" height="400" fill="#161009"/>
+            <g stroke="#f2e9da" stroke-width="1" opacity=".55">
+              <path d="M0,60 L320,340 M320,60 L0,340 M0,150 L320,250 M0,250 L320,150"/>
+            </g>
+            <g fill="#c9a227"><circle cx="80" cy="150" r="5"/><circle cx="160" cy="150" r="5"/><circle cx="240" cy="150" r="5"/><circle cx="80" cy="250" r="5"/><circle cx="160" cy="250" r="5"/><circle cx="240" cy="250" r="5"/></g>
+          </svg>
+          <div class="port-info"><h3>Mundillo Salvaje</h3><p>Encaje de bolillos · lino crudo · 2024</p></div>
+        </article>
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bordado</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Cicatriz Dorada">
+            <rect width="320" height="400" fill="#0b0908"/>
+            <path d="M40,360 C120,300 90,220 160,190 C230,160 200,90 280,50" fill="none" stroke="#c9a227" stroke-width="6" opacity=".85"/>
+            <path d="M40,360 C120,300 90,220 160,190 C230,160 200,90 280,50" fill="none" stroke="#c81d2b" stroke-width="1.5" stroke-dasharray="4 6"/>
+          </svg>
+          <div class="port-info"><h3>Cicatriz Dorada</h3><p>Bordado · realce sobre lana hervida · 2025</p></div>
+        </article>
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bolillos</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Velo Punk">
+            <rect width="320" height="400" fill="#161009"/>
+            <g stroke="#f2e9da" stroke-width="1" opacity=".5"><path d="M20,20 L300,380 M300,20 L20,380"/></g>
+            <g fill="#c81d2b"><circle cx="90" cy="90" r="6"/><circle cx="230" cy="90" r="6"/><circle cx="160" cy="200" r="6"/><circle cx="90" cy="310" r="6"/><circle cx="230" cy="310" r="6"/></g>
+          </svg>
+          <div class="port-info"><h3>Velo Punk</h3><p>Encaje de bolillos + tachuelas · 2023</p></div>
+        </article>
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bordado</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Segunda Piel">
+            <rect width="320" height="400" fill="#0b0908"/>
+            <g stroke="#c9a227" stroke-width="2" fill="none" opacity=".75">
+              <path d="M160,40 C220,90 260,160 220,220 C270,260 250,330 160,360 C70,330 50,260 100,220 C60,160 100,90 160,40 Z"/>
+            </g>
+          </svg>
+          <div class="port-info"><h3>Segunda Piel</h3><p>Bordado sobre cuero · 2024</p></div>
+        </article>
+
+        <article class="port-card" data-reveal>
+          <span class="port-tag">Bolillos</span>
+          <svg class="port-art" viewBox="0 0 320 400" role="img" aria-label="Ilustración de la pieza Blonda Negra">
+            <rect width="320" height="400" fill="#161009"/>
+            <g stroke="#c81d2b" stroke-width="1.4" fill="none" opacity=".8">
+              <circle cx="160" cy="200" r="150"/><circle cx="160" cy="200" r="110"/><circle cx="160" cy="200" r="70"/>
+            </g>
+          </svg>
+          <div class="port-info"><h3>Blonda Negra</h3><p>Encaje de bolillos · seda negra · 2025</p></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-wrap alt" aria-hidden="true">
+    <div class="marquee-track">
+      <span>TEATRO LUNA NEGRA<i>·</i>MUSEO DEL HILO<i>·</i>CASA VERA MODA<i>·</i>REVISTA PUNTADA<i>·</i>BALLET RUBOR<i>·</i>GALERÍA MATERIA</span>
+      <span>TEATRO LUNA NEGRA<i>·</i>MUSEO DEL HILO<i>·</i>CASA VERA MODA<i>·</i>REVISTA PUNTADA<i>·</i>BALLET RUBOR<i>·</i>GALERÍA MATERIA</span>
+    </div>
+  </div>
+
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Encargos / 05</p>
+        <h2 class="section-title">Cómo trabajamos contigo</h2>
+      </div>
+      <div class="serv-grid">
+        <div class="serv-card" data-reveal>
+          <h3>Piezas a medida</h3>
+          <p>Bordado o encaje de bolillos diseñado desde cero para ti: moda, vestuario escénico, complementos o pieza de coleccionista.</p>
+          <span class="serv-price">Desde consulta inicial</span>
+        </div>
+        <div class="serv-card" data-reveal>
+          <h3>Talleres de bolillos</h3>
+          <p>Sesiones individuales o en grupo reducido para aprender el manejo del mundillo, el picado y los puntos básicos del encaje.</p>
+          <span class="serv-price">Plazas limitadas</span>
+        </div>
+        <div class="serv-card" data-reveal>
+          <h3>Restauración textil</h3>
+          <p>Recuperamos bordados y encajes antiguos de familia, vestuario o piezas de museo respetando la técnica original.</p>
+          <span class="serv-price">Presupuesto según pieza</span>
+        </div>
+        <div class="serv-card" data-reveal>
+          <h3>Editorial &amp; escena</h3>
+          <p>Colaboraciones con moda, teatro y danza: piezas textiles pensadas para moverse y aguantar un escenario.</p>
+          <span class="serv-price">A convenir</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonios" id="testimonios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Voces / 06</p>
+        <h2 class="section-title">Quien ya lo lleva puesto</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card" data-reveal>
+          <p class="test-quote">«Pedí un velo de novia y me trajeron una declaración de guerra hecha de bolillos. No me lo he quitado ni para la resaca.»</p>
+          <p class="test-who">— Clienta, pieza de novia</p>
+        </div>
+        <div class="test-card" data-reveal>
+          <p class="test-quote">«El vestuario aguantó doce funciones de gira sin perder una puntada. Eso solo lo hace quien entiende de hilo de verdad.»</p>
+          <p class="test-who">— Diseñadora de vestuario, compañía de danza</p>
+        </div>
+        <div class="test-card" data-reveal>
+          <p class="test-quote">«Restauraron un mantón de mi abuela que dábamos por perdido. Volvió con las mismas manías y ninguna de sus grietas.»</p>
+          <p class="test-who">— Coleccionista de textil antiguo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <p class="eyebrow" data-reveal>Contacto / 07</p>
+      <h2 class="cta-title" data-reveal>¿Hablamos<br>de tu pieza?</h2>
+      <div class="contacto-grid">
+        <div class="contacto-info" data-reveal>
+          <p>Cuéntanos qué necesitas: una pieza de autor, una restauración o un taller. Respondemos en persona, no con un bot con hilo de pega.</p>
+          <div class="info-line"><span>Email</span><span>hola@rojohilo.studio</span></div>
+          <div class="info-line"><span>Instagram</span><span>@rojohilo.studio</span></div>
+          <div class="info-line"><span>Taller</span><span>Madrid, España — con cita previa</span></div>
+          <div class="info-line"><span>Plazos</span><span>2 a 8 semanas según pieza</span></div>
+        </div>
+        <form class="contacto-form" data-reveal id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Nombre</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com">
+          </div>
+          <div class="field">
+            <label for="cf-type">Tipo de encargo</label>
+            <select id="cf-type" name="type">
+              <option>Pieza a medida</option>
+              <option>Taller de bolillos</option>
+              <option>Restauración textil</option>
+              <option>Editorial / escena</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-msg">Mensaje</label>
+            <textarea id="cf-msg" name="message" required placeholder="Cuéntanos tu idea, plazos y presupuesto orientativo"></textarea>
+          </div>
+          <label class="hp" aria-hidden="true">
+            No rellenar
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
+          </label>
+          <!--
+            Clave de PRUEBA pública de hCaptcha (siempre aprueba, documentada por
+            hCaptcha para desarrollo). Sustituir por tu site key real antes de
+            publicar — ver README paso 4. La site key es pública, no es secreta.
+          -->
+          <div class="h-captcha-wrap">
+            <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001" data-theme="dark"></div>
+          </div>
+          <button class="btn btn-solid" type="submit">Enviar puntada</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <a class="brand" href="#top"><span class="brand-mark">✱</span>ROJO HILO</a>
+      <nav class="foot-links" aria-label="Enlaces de pie de página">
+        <a href="#tecnicas">Técnicas</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <p class="foot-legal">
+      © 2026 Rojo Hilo Atelier · Contenido, imágenes y datos de ejemplo pendientes de sustitución antes de publicar ·
+      <a href="/aviso-legal.html">Aviso legal</a> ·
+      <a href="/privacidad.html">Privacidad</a> ·
+      <a href="/cookies.html">Cookies</a> ·
+      <a href="/accesibilidad.html">Accesibilidad</a> ·
+      <a href="#" id="cookiePrefsLink">Preferencias de cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div class="floating-cta" id="floatingCta">
+  <a href="#contacto">✱ Encargar pieza</a>
+</div>
+
+<!--
+  Aviso de cookies: hCaptcha (necesaria para el formulario) se carga siempre;
+  Tidio (chat) solo se inyecta en el DOM si el visitante pulsa "Aceptar
+  todas" — ver assets/cookies.js. Antes de publicar, sustituye
+  TU_CLAVE_PUBLICA dentro de ese archivo por tu Public Key real de Tidio.
+-->
+<div class="cookie-banner" id="cookieBanner" role="region" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+  <p>Usamos una cookie necesaria (hCaptcha) para proteger el formulario de contacto y, solo si lo aceptas, un chat en vivo de terceros (Tidio). Más info en la <a href="/cookies.html">política de cookies</a>.</p>
+  <div class="cookie-banner-actions">
+    <button type="button" class="btn btn-line" id="cookieRejectBtn">Solo necesarias</button>
+    <button type="button" class="btn btn-solid" id="cookieAcceptBtn">Aceptar todas</button>
+  </div>
+</div>
+
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script src="/assets/cookies.js"></script>
+<script src="/assets/a11y.js"></script>
+<script src="/assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Declaración de accesibilidad — Rojo Hilo</title>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tu-dominio.com/accesibilidad.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Literata:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script>
+(function(){
+  try{
+    var p = JSON.parse(localStorage.getItem("rojohilo_a11y_prefs")) || {};
+    var c = document.documentElement.classList;
+    if (p.textScale === 1) c.add("a11y-text-lg");
+    if (p.textScale === 2) c.add("a11y-text-xl");
+    if (p.contrast) c.add("a11y-contrast");
+    if (p.noMotion) c.add("a11y-no-motion");
+    if (p.underline) c.add("a11y-underline");
+    if (p.dyslexic) c.add("a11y-dyslexic");
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<header class="legal-header">
+  <div class="container">
+    <a class="back-link" href="/#top">← Volver a Rojo Hilo</a>
+    <h1>Declaración de accesibilidad</h1>
+    <p class="legal-updated">Última actualización: <span class="legal-placeholder">[FECHA]</span></p>
+  </div>
+</header>
+
+<div class="container legal-body">
+  <div class="legal-disclaimer">
+    Plantilla orientativa, no es una certificación oficial de conformidad.
+    Antes de publicar la web, verifica cada punto con pruebas reales
+    (lector de pantalla, teclado, herramientas automáticas) y sustituye la
+    fecha y el canal de contacto por los definitivos.
+  </div>
+
+  <h2>1. Compromiso</h2>
+  <p>
+    Rojo Hilo se esfuerza por que esta web sea utilizable por el mayor
+    número de personas posible, incluidas las personas con discapacidad
+    visual, auditiva, motriz o cognitiva. Este sitio se ha diseñado
+    orientándose a las Pautas de Accesibilidad para el Contenido Web
+    (WCAG) 2.1, nivel AA, como referencia — sin que ello constituya una
+    certificación formal de conformidad.
+  </p>
+
+  <h2>2. Medidas implementadas</h2>
+  <ul>
+    <li>Enlace de salto directo al contenido principal (<em>"Saltar al contenido"</em>) para quienes navegan con teclado o lector de pantalla.</li>
+    <li>Estructura de encabezados jerárquica (h1–h3) y regiones de página identificadas (cabecera, navegación, contenido principal, pie).</li>
+    <li>Contraste de color comprobado (ratio mínimo 4.5:1 en texto normal) en los estados interactivos clave, incluidos los botones al pasar el ratón o el foco.</li>
+    <li>Indicadores de foco visibles (<code>:focus-visible</code>) en todos los elementos interactivos, sin depender solo del color.</li>
+    <li>Menú móvil y panel de accesibilidad implementados como diálogos accesibles: atrapan el foco mientras están abiertos, se cierran con la tecla Escape y devuelven el foco al botón que los abrió.</li>
+    <li>Respeto a la preferencia del sistema <code>prefers-reduced-motion</code>, con la opción adicional de forzar la reducción de movimiento manualmente.</li>
+    <li>Soporte del modo de alto contraste de Windows (<code>forced-colors</code>) y de la preferencia <code>prefers-reduced-transparency</code>.</li>
+    <li>Formulario de contacto con etiquetas asociadas a cada campo, mensajes de error anunciados (<code>aria-live</code>) y foco automático en el primer campo con error.</li>
+    <li>Panel de accesibilidad propio, activable desde cualquier página, con controles reales (no un "overlay" cosmético) para: aumentar el tamaño del texto en tres niveles, activar un alto contraste reforzado, reducir el movimiento, subrayar todos los enlaces y cambiar a una tipografía de lectura fácil (Atkinson Hyperlegible). Las preferencias se recuerdan entre visitas.</li>
+    <li>Textos alternativos descriptivos en las ilustraciones del portafolio y elementos puramente decorativos marcados como tales (<code>aria-hidden</code>) para no generar ruido en lectores de pantalla.</li>
+  </ul>
+
+  <h2>3. Limitaciones conocidas</h2>
+  <p>
+    Esta es una versión de ejemplo con contenido e imágenes provisionales.
+    Antes de publicar la versión definitiva, se recomienda repetir las
+    pruebas de accesibilidad con las fotografías, textos y vídeos reales
+    que sustituyan a los actuales, ya que un texto alternativo o un
+    contraste correctos en el boceto no garantizan que sigan siéndolo con
+    el contenido final.
+  </p>
+
+  <h2>4. Cómo activar las opciones de accesibilidad</h2>
+  <p>
+    El botón <strong>"Accesibilidad"</strong> (icono ♿) situado en la
+    cabecera, visible en todas las páginas, abre un panel desde el que se
+    puede ajustar el tamaño del texto, el contraste, el movimiento, el
+    subrayado de enlaces y la tipografía. Los cambios se aplican al
+    instante y se recuerdan en las siguientes visitas desde este mismo
+    navegador.
+  </p>
+
+  <h2>5. Sobre el clic derecho en las ilustraciones del portafolio</h2>
+  <p>
+    Las imágenes de ejemplo del portafolio muestran un aviso al intentar
+    abrir el menú contextual sobre ellas, a modo de recordatorio de que
+    son piezas de autor. Esta medida se aplica únicamente a esas
+    ilustraciones — nunca al resto del sitio, al texto o a los datos de
+    contacto — precisamente para no interferir con lectores de pantalla,
+    traductores automáticos, ni con la posibilidad de seleccionar o copiar
+    cualquier otro contenido de la página.
+  </p>
+
+  <h2>6. Contacto sobre accesibilidad</h2>
+  <p>
+    Si al usar esta web encuentras una barrera de accesibilidad, puedes
+    avisarnos en <span class="legal-placeholder">[EMAIL DE CONTACTO]</span>
+    describiendo el problema, la página y, si es posible, el dispositivo o
+    lector de pantalla que usabas. Intentaremos responder y corregirlo en
+    un plazo razonable.
+  </p>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <a class="brand" href="/#top"><span class="brand-mark">✱</span>ROJO HILO</a>
+      <nav class="foot-links" aria-label="Enlaces de pie de página">
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/accesibilidad.html">Accesibilidad</a>
+      </nav>
+    </div>
+    <p class="foot-legal">© 2026 Rojo Hilo Atelier</p>
+  </div>
+</footer>
+
+</body>
+</html>
