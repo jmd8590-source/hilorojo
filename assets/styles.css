@@ -487,6 +487,7 @@ section{ position:relative; padding-block:clamp(64px,10vw,140px); }
   display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem;
   box-shadow:0 -16px 40px -20px rgba(0,0,0,.7);
 }
+.cookie-banner[hidden]{ display:none; }
 .cookie-banner p{ margin:0; max-width:60ch; font-size:.88rem; color:var(--paper-dim); }
 .cookie-banner a{ color:var(--gold); text-decoration:underline; }
 .cookie-banner-actions{ display:flex; gap:.7rem; flex-shrink:0; }
