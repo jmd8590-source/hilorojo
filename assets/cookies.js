@@ -24,13 +24,27 @@
       /* almacenamiento no disponible (navegación privada, etc.): seguimos sin persistir */
     }
   }
-  function loadTidio() {
-    if (document.getElementById("tidio-script")) return;
-    var s = document.createElement("script");
-    s.id = "tidio-script";
-    s.src = TIDIO_SRC;
-    s.async = true;
-    document.body.appendChild(s);
+  function cargarChatbase() {
+  if (window.__chatbaseCargado) return;
+  window.__chatbaseCargado = true;
+  if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+    window.chatbase = (...args) => {
+      if (!window.chatbase.q) window.chatbase.q = [];
+      window.chatbase.q.push(args);
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") return target.q;
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+  const s = document.createElement("script");
+  s.src = "https://www.chatbase.co/embed.min.js";
+  s.id = "rDd4kSmyBmfUyS6AE4F-n";
+  s.domain = "www.chatbase.co";
+  document.body.appendChild(s);
+}
   }
 
   var banner = document.getElementById("cookieBanner");
