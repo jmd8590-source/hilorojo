@@ -3,11 +3,11 @@
   // Consentimiento de cookies muy simple: dos categorías.
   //  - "necesarias": hCaptcha, imprescindible para el envío del formulario
   //    de contacto que el propio visitante activa; se carga siempre.
-  //  - "chat": el widget de Tidio, que solo se inyecta en el DOM si el
+  //  - "chat": el widget de Chatbase, que solo se inyecta en el DOM si el
   //    visitante acepta. Antes de aceptar no se hace ninguna petición a
-  //    code.tidio.co ni se planta ninguna cookie de esa categoría.
+  //    chatbase.co ni se planta ninguna cookie de esa categoría.
   var STORAGE_KEY = "rojohilo_cookie_consent";
-  var TIDIO_SRC = "//code.tidio.co/TU_CLAVE_PUBLICA.js";
+  var CHATBASE_ID = "rDd4kSmyBmfUyS6AE4F-n";
 
   function getConsent() {
     try {
@@ -24,27 +24,42 @@
       /* almacenamiento no disponible (navegación privada, etc.): seguimos sin persistir */
     }
   }
-  function cargarChatbase() {
-  if (window.__chatbaseCargado) return;
-  window.__chatbaseCargado = true;
-  if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-    window.chatbase = (...args) => {
-      if (!window.chatbase.q) window.chatbase.q = [];
-      window.chatbase.q.push(args);
-    };
-    window.chatbase = new Proxy(window.chatbase, {
-      get(target, prop) {
-        if (prop === "q") return target.q;
-        return (...args) => target(prop, ...args);
-      }
-    });
-  }
-  const s = document.createElement("script");
-  s.src = "https://www.chatbase.co/embed.min.js";
-  s.id = "rDd4kSmyBmfUyS6AE4F-n";
-  s.domain = "www.chatbase.co";
-  document.body.appendChild(s);
-}
+
+  function loadChatbase() {
+    if (window.__chatbaseCargado || document.getElementById(CHATBASE_ID)) return;
+    window.__chatbaseCargado = true;
+
+    // Cola de comandos de Chatbase (igual que el snippet oficial)
+    if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+      window.chatbase = function () {
+        if (!window.chatbase.q) window.chatbase.q = [];
+        window.chatbase.q.push(arguments);
+      };
+      window.chatbase = new Proxy(window.chatbase, {
+        get: function (target, prop) {
+          if (prop === "q") return target.q;
+          return function () {
+            var args = Array.prototype.slice.call(arguments);
+            return target.apply(null, [prop].concat(args));
+          };
+        }
+      });
+    }
+
+    function inject() {
+      var s = document.createElement("script");
+      s.src = "https://www.chatbase.co/embed.min.js";
+      s.id = CHATBASE_ID;
+      s.domain = "www.chatbase.co"; // texto plano, sin formato Markdown
+      document.body.appendChild(s);
+    }
+
+    // El script oficial espera al evento "load"; aquí puede que ya haya pasado
+    if (document.readyState === "complete") {
+      inject();
+    } else {
+      window.addEventListener("load", inject);
+    }
   }
 
   var banner = document.getElementById("cookieBanner");
@@ -61,7 +76,7 @@
 
   var consent = getConsent();
   if (consent && consent.chat) {
-    loadTidio();
+    loadChatbase();
   }
   if (!consent) {
     showBanner();
@@ -70,14 +85,17 @@
   if (acceptBtn) {
     acceptBtn.addEventListener("click", function () {
       setConsent({ chat: true, ts: Date.now() });
-      loadTidio();
+      loadChatbase();
       hideBanner();
     });
   }
   if (rejectBtn) {
     rejectBtn.addEventListener("click", function () {
+      var estabaCargado = !!window.__chatbaseCargado;
       setConsent({ chat: false, ts: Date.now() });
       hideBanner();
+      // Si ya se había cargado el chat, recargamos para retirarlo por completo
+      if (estabaCargado) location.reload();
     });
   }
   if (prefsLink) {
